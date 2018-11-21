@@ -83,7 +83,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     func getKeyboardHeight(_ notification: Notification) -> CGFloat {
         let userInfo = notification.userInfo
-        let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
+        let keyboardSize = userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue
         
         return keyboardSize.cgRectValue.height
     }
